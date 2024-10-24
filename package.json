@@ -1,6 +1,6 @@
 {
   "name": "use-state-query-params",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A custom React hook to bind state with URL query parameters",
   "main": "dist/index.js",
   "type": "module",
