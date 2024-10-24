@@ -5,12 +5,17 @@
   "main": "dist/index.js",
   "type": "module",
   "module": "dist/index.esm.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "prepare": "husky",
     "release": "release-it"
   },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/solehudin5699/useStateQueryParams.git"
