@@ -1,0 +1,8 @@
+# .npmignore
+src/
+tests/
+.git/
+.vscode/
+*.log
+README.md
+LICENSE
