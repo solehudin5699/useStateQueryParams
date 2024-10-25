@@ -3,17 +3,18 @@ import { babel } from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
+import terser from '@rollup/plugin-terser';
 
 export default {
   input: './src/index.tsx',
   output: [
     {
-      file: 'dist/index.js',
+      file: 'index.js',
       format: 'cjs',
       exports: 'named',
     },
     {
-      file: 'dist/index.esm.js',
+      file: 'index.esm.js',
       format: 'esm',
     },
   ],
@@ -30,5 +31,6 @@ export default {
       babelHelpers: 'bundled',
       extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx'],
     }),
+    terser(),
   ],
 };
