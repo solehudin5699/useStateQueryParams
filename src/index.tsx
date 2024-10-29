@@ -24,7 +24,7 @@ function useStateQueryParams<T extends object>(
   };
 
   // Initialize state with the query parameters or default values
-  const [state, setState] = useState<T>(getQueryParams);
+  const [state, setState] = useState<T>({} as T);
 
   const setQueryParams = (newValues: Partial<T>) => {
     if (!isClient) return;
@@ -49,6 +49,7 @@ function useStateQueryParams<T extends object>(
 
   // Sync state when the URL changes (e.g., via back/forward browser buttons)
   useEffect(() => {
+    setState(getQueryParams());
     const handlePopState = () => {
       setState(getQueryParams());
     };
